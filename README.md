@@ -28,9 +28,9 @@ MongoDB with Mongoose
 
 ##### To run the code:
 1. Install the dependencies listed above
-2. Cd to this folder in terminal
+2. Clone/download this folder and then cd into it in terminal
 3. To run the mongoDB shell type: sudo mongod 
-4. Ro run the app.js, stay cd in the same folder then type: node app
+4. To run the app.js, open a new tab on terminal, stay cd in the same folder, then type: node app
 
 ##### Bugs:
 The app currently works with a chrome extension called Allow-Control-Allow-Origin, which allows my site to make requests with Ajax from any source. As of now, unless CORS is enabled the app won’t run. 
