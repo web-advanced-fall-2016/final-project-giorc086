@@ -14,6 +14,7 @@ In order to display the data from the database I created an API that gets the na
 | GET     | /resort/id    | Get one resort                   |
 
 Database module from Mongoose is called: Resort
+
 ![Alt text](/Mongoose Module.png?raw=true "Architecture")
 
 ##### Before running the code the following dependencies need to be installed from NPM:
