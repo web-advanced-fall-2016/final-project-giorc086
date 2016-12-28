@@ -1,0 +1,13 @@
+h1{
+  font-family: 'Lato', sans-serif;
+}
+
+body{
+  font-family: 'Lato', sans-serif;
+  margin-left: 50px;
+}
+
+li{
+  list-style: none;
+  margin-top: 10px;
+}
