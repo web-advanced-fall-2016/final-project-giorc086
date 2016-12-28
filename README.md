@@ -1,55 +1,34 @@
 # Final Assignment
+For my final assignment I developed a full stack focused project. The idea stems from my thesis which is trying to create a web resource for skiing resorts. For the purpose of this project I created an app that allows users to search for resorts in colorado through a UI search field. When one location is clicked the temperature of that location is shown.
 
-Your last assignment is different from your previous assignments. This time you should come up with a proposal on what you want to make. Go back and think about what we discussed in our first session => the reason you are taking this course and what you want to learn from it. Or think how can JavaScript can help your thesis project and try to help your thesis (make an artifact for your thesis / data visualization / documentation website / blog). Teamwork is allowed, in fact you are encouraged to team up (maximum 2 per group. And of course, expectation is higher when doing a team project). Make something nice that you will be proud of. Make something that you will put it on your portfolio, despite how minimal it would be.
+#### The architecture of my app
 
-You can use any tool/library as long as you properly reference it. There are no instructions or rules on what you have to implement. That said, try to categorize your project in one of the three below categories and do something that at least loosely relates to some of the ideas provided. These are just ideas, not rules or requirements!
-
-#### :one:Backend Focused
-
-##### Some ideas
-
-* Maybe design a RESTful API, create a documentation on the endpoints and services of your application.
-* Interface with one or two APIs, do some data processing and analysis.
-* Bring in physical computing, use node to connect to an Arduino and process user/environment interactions. Use serialport.
-* Dive into databases, connect to postgres, mysql, mongodb, mariadb or … . Look into Mongoose or Sequelize and use them.
-
-#### :two:Frontend Focused
-
-##### Some ideas
-
-- Implement UI elements of your choice, show your JavaScript skills.
-- Make a responsive static web page. Make cool and neat interactions.
-- Use p5.js/paper.js/snap.svg . 
-- Make your own icons and animations.
-- Data visualization, use chart.js/THREE.js/WebGL
-
-#### :three:Full Stack
-
-##### Some ideas
-
-- Make something similar to the Todo list. Just give it an actual purpose and use.
-- Make a blog for your self and actually host. You will need this one for your thesis! (so make one now yourself).
-- Do some tempting with `.jade` or any other tempting engine of your choice with Expressjs.
-- Use web sockets (websocket/socket.io) to create realtime user interaction. Shared document?? shared painting ??
-- Make a game, multiplayer ??
+The first step to build this app was to use the API On The Snow to gather the list of resorts in Colorado and the temperature in each one. The list of the resorts and the temperature is requested from the API every hour and it gets saved in the MongoDB database. 
+In order to display the data from the database I created an API that gets the name of all the resorts. 
 
 
+| Verb    | URL endpoint  | Resource Description             |
+| --------|:-------------:| --------------------------------:|
+| GET     | /resort       | Get list of resort, ids and temp |
+| GET     | /resort/id    | Get one resort                   |
 
-### Submission Detail
-
-Every person/team should send a proposal to me by Monday Dec. 5th. I will review your proposal and will give you a feedback in a day. I won't change you project, I might only add few things to it, simplify or give your hints on where to start with it.
-
-#### Hard Deadline
-
-December 20th.
-
-##### Submission Requirements
-
-After submitting your proposal, a repository will be created for every person/team. Your final code should be push to the repository before deadline. 
-
-You must write a README.md for your repository, explaining your idea, approach, tools/libraries and … .
+Database module from Mongoose is called: Resort
 
 
+##### Before running the code the following dependencies need to be installed from NPM:
+Request
+Express
+Body Parser
+JSON Parser
 
-### Good luck :fire::fire::fire:
+##### No-SQL Database used:
+MongoDB with Mongoose
+
+##### Bugs:
+The app currently works with a chrome extension called Allow-Control-Allow-Origin, which allows my site to make requests with Ajax from any source. As of now, unless CORS is enabled the app won’t run. 
+
+The second bug is that the temperature of the location selected on the client side doesn’t get displayed. There is an error either in the app.js or the script.js. 
+
+
+:fire::fire::fire:
 
