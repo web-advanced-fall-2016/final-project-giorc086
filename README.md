@@ -3,6 +3,7 @@ For my final assignment I developed a full stack focused project. The idea stems
 
 #### The architecture of my app
 ![Alt text](/ArchitectureWebFinal.png?raw=true "Architecture")
+
 The first step to build this app was to use the API On The Snow to gather the list of resorts in Colorado and the temperature in each one. The list of the resorts and the temperature is requested from the API every hour and it gets saved in the MongoDB database. 
 In order to display the data from the database I created an API that gets the name of all the resorts. 
 
@@ -13,7 +14,7 @@ In order to display the data from the database I created an API that gets the na
 | GET     | /resort/id    | Get one resort                   |
 
 Database module from Mongoose is called: Resort
-
+![Alt text](/Mongoose_Module.png?raw=true "Architecture")
 
 ##### Before running the code the following dependencies need to be installed from NPM:
 Request
